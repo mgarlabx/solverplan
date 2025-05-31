@@ -1,0 +1,539 @@
+body {
+    font-family: Nunito, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding: 1rem;
+    background-color: lightgray;
+}
+
+
+/* MODAL */
+
+dialog {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overscroll-behavior: contain;
+    width: 80%;
+    height: fit-content;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* 
+#modal {
+    background-color: red;
+}
+
+#modal-body {
+    background-color: cyan;
+} */
+
+#modal-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+#modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#modal-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.modal-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    width: 30px;
+    text-align: center;
+    margin-left: 0.5rem;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* PROCESSING */
+
+#processing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5em;
+    display: none;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: start;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+    text-align: center;
+    margin-top: 1rem;
+    height: 50px;
+    border: 1px solid white;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button-back {
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+}
+
+.button-element {
+    display: inline-block;
+}
+
+
+/* HEADER */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: cyan;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+}
+
+#header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+#header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+.header-button-json {
+    display: none;
+}
+
+
+
+/* MENU */
+
+#menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu-toggle:hover {
+    background-color: lightgray;
+}
+
+#menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 5px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.menu-item {
+    cursor: pointer;
+    margin: 0.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+}
+
+.menu-item:hover {
+    background-color: lightgray;
+}
+
+.menu-caption {
+    margin-left: 0.5rem;
+}
+
+.menu-separator {
+    border-top: 1px solid lightgray;
+    margin: 0.25rem;
+}
+
+
+
+
+
+/* BUILDER */
+
+#builder {
+    margin-top: 50px;
+}
+
+.builder-section {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+}
+
+.builder-terms {
+    background-color: khaki;
+}
+
+#input-competency {
+    width: calc(100% - 1.25rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+.study-line {
+    color: blue;
+    cursor: pointer;
+}
+
+.study-line:hover {
+    text-decoration: underline;
+}
+
+
+/* STUDY */
+
+#study {
+    display: none;
+    margin-top: 80px;
+}
+
+#study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#study-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#study-buttons {
+    display: flex;
+    align-items: center;
+    float: right;
+
+}
+
+
+.study-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    width: 30px;
+    text-align: center;
+    margin-left: 0.5rem;
+}
+
+.study-button:hover {
+    background-color: #0056b3;
+}
+
+.study-section {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+}
+
+.study-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.study-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.study-section-refresh {
+    float: right;
+}
+
+
+.study-section-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.study-section-button {
+    margin-right: 0.5rem;
+    width: 10px;
+}
+
+#study-video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#study-video-iframe {
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+}
+
+#study-news-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#study-news-img {
+    width: 100%;
+}
+
+#study-text-buttons {
+    display: none;
+    margin-bottom: 0.5rem;
+}
+
+.study-text-button {
+    cursor: pointer;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: 1px solid lightgrey;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+.study-text-button:hover {
+    border-color: darkgray;
+}
+
+#study-text-raw {
+    display: none;
+    width: 100%;
+    height: 200px;
+}
+
+.study-modal-row {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1rem;
+}
+
+.study-modal-cell-left {
+    width: 20%;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
+
+
+
+/* EDIT */
+
+.editor-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.editor-line-content {
+    width: 100%;
+}
+
+.editor-buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.editor-button {
+    cursor: pointer;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: 1px solid lightgrey;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.editor-button:hover {
+    border-color: darkgray;
+}
+
+.editor-button-save {
+    display: none;
+}
+
+.editor-button-cancel {
+    display: none;
+}
+
+
+
+/* ACCORDION */
+
+.accordion-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.accordion-child {
+    overflow: hidden;
+}
+
+.accordion-icons {
+    display: flex;
+    align-items: center;
+}
+
+.accordion-icon {
+    margin-right: 0.5rem;
+}
+
+
+/* iPhone: 312 x 511 */
+@media only screen and (max-width: 350px) {
+
+    #header {
+        display: block;
+    }
+
+    #header-left {
+        margin-bottom: 1rem;
+    }
+
+    #header-right {
+        justify-content: left;
+    }
+
+    #header-title {
+        font-size: 1rem;
+    }
+
+    #builder {
+        margin-top: 100px;
+    }
+
+}
+
+
+/* Android: 382 x 699 */
+@media only screen and (max-width: 400px) {
+
+    #header {
+        display: block;
+    }
+
+    #header-left {
+        margin-bottom: 1rem;
+    }
+
+    #header-right {
+        justify-content: left;
+    }
+
+    #header-title {
+        font-size: 1.25rem;
+    }
+
+    #builder {
+        margin-top: 120px;
+    }
+
+    #study {
+        margin-top: 120px;
+    }
+
+}
